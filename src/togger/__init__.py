@@ -28,7 +28,9 @@ def _make_log(name: str, level: int) -> callable[..., None]:
                 case Decoded() as decoded:
                     result.append(decoded)
                 case Interpolation() as interpolation:
-                    value = intepolation.getvalue()
+                    value = interpolation.getvalue()
+                    if not isinstance(value, str):
+                        value = str(value)
                     result.append(value)
         logger.log(level, ''.join(result))
 
