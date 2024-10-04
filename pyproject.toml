@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "togger"
 authors = [{name = "Jason Fried", email = "me@jasonfried.info"}]
-version = "24.10.05a1"
+version = "24.10.5a1"
 requires-python = ">=3.14"
 description = "A python logging frontend using T-Strings"
 readme = "README.md"
