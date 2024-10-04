@@ -1,7 +1,7 @@
 # togger 
 
 T-String Logging Library built ontop of python logging module. 
-
+Logger names are always based on the `__NAME__`
 Strings formatting is lazy, so if the log level is not enabled, no stringification takes place. 
 
 ```python
@@ -14,7 +14,7 @@ fatal"oh noes"
 # Works with logging by level int instead of name
 from togger import log
 
-level1=ddd log(1)
+level1=log(1)
 level1"{level1!r} Error Message"
 
 # Works with custom level names
