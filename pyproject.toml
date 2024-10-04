@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "togger"
+authors = [{name = "Jason Fried", email = "me@jasonfried.info"}]
+version = "24.10.04a1"
+requires-python = ">=3.14"
+description = "A python logging frontend using T-Strings"
+readme = "README.md"
+classifiers = [
+   "Programming Language :: Python :: 3",
+   "Intended Audience :: Developers",
+   "License :: OSI Approved :: Apache Software License", 
+   "Operating System :: OS Independent",
+   "Topic :: Software Development :: Libraries :: Python Modules",
+   "Topic :: System :: Logging",
+]
+
+[project.urls]
+Github = "https://github.com/fried/togger"
+Issues = "https://github.com/fried/togger/issues"
