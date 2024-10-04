@@ -1,26 +1,24 @@
-name: Upload Python Package
+name: Upload Python Package Workflow
 
 on:
   release:
     types: [published]
 
-permissions:
-  contents: read
-
 jobs:
-  deploy:
+  pypi-publish:
     name: upload release to PyPI
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/project/togger
+      url: https://pypi.org/p/togger
     permissions:
+      contents: read
       id-token: write
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4.2.0
     - name: Set up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5.2.0
       with:
         python-version: '3.12'
     - name: Install dependencies
@@ -29,6 +27,6 @@ jobs:
         pip install build
     - name: Build package
       run: python -m build
-    - name: Publish package
-      uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+    - name: Publish package distributions to PyPI
+      uses: pypa/gh-action-pypi-publish@v1.10.3
 
