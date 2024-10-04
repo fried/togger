@@ -1,7 +1,9 @@
 # togger 
 
 T-String Logging Library built ontop of python logging module. 
+
 Logger names are always based on the `__NAME__`
+
 Strings formatting is lazy, so if the log level is not enabled, no stringification takes place. 
 
 ```python
